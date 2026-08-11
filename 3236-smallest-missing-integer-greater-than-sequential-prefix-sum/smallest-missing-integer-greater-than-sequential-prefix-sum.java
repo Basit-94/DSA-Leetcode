@@ -1,5 +1,4 @@
 class Solution {
-    int i=0;
     public int missingInteger(int[] nums) {
         if(nums.length==1)
         {
@@ -8,7 +7,7 @@ class Solution {
 
         int result=0;
   
-        for(i=1;i<nums.length;i++)
+        for(int i=1;i<nums.length;i++)
         {
             int s = sum(nums,nums[i-1]);
 
@@ -18,7 +17,7 @@ class Solution {
 
         Arrays.sort(nums);
 
-        for(i=0;i<nums.length;i++)
+        for(int i=0;i<nums.length;i++)
         {
             if(result==nums[i])
             {
@@ -30,6 +29,7 @@ class Solution {
     }
     int sum(int nums[],int start)
     {
+        int i=1;
         while(i<nums.length && nums[i]==(nums[i-1]+1))
         {
             start = start+nums[i++];
