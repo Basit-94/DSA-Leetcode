@@ -2,12 +2,6 @@ class Solution {
     HashMap<Integer,Integer> map = new HashMap<>();
     public int maxSubarrayLength(int[] nums, int k) {
 
-        if(nums.length==1)
-        {
-            return 1;
-        }
-        int result=0;
-
         return finalist(nums,k,0,0);
     }
    
