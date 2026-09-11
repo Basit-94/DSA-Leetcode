@@ -5,10 +5,10 @@ class Solution {
         {
             return false;
         }
-        if(s.length()==0)
+        /*if(s.length()==0)
         {
             return true;
-        }
+        }*/
         while(left<s.length() && right<t.length())
         {
             char c1 = s.charAt(left);
