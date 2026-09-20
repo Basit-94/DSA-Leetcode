@@ -4,7 +4,7 @@ class Solution {
         for(int i=0;i<s.length();i++)
         {
             char c = s.charAt(i);
-            sum = sum+(i+1)*Math.abs((int)c - 123);
+            sum = sum+(i+1)*(123-(int)c);
         }
 
         return sum;
