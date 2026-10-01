@@ -3,10 +3,10 @@ class Solution {
         s = s.toLowerCase();
         int left = 0,right = s.length()-1; 
         while(left<right) {
-            while(((s.charAt(left)<'a' || s.charAt(left)>'z') && !Character.isDigit(s.charAt(left))) && (left<right) ) {
+            while(!Character.isLetterOrDigit(s.charAt(left)) && (left<right) ) {
                 left++;
             }
-            while(((s.charAt(right)<'a' || s.charAt(right)>'z') && !Character.isDigit(s.charAt(right))) && (left<right) ) {
+            while(!Character.isLetterOrDigit(s.charAt(right)) && (left<right) ) {
                 right--;
             }
 
