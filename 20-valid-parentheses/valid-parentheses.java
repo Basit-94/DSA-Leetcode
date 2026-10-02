@@ -23,6 +23,6 @@ class Solution {
             }
         }
 
-        return (st.isEmpty()) ? true : false;
+        return st.isEmpty();
     }
 }
