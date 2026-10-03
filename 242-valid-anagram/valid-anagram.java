@@ -3,23 +3,19 @@ class Solution {
         if(s.length()!=t.length()) {
             return false;
         }
-        HashMap<Character,Integer> map = new HashMap<>();
-
+        
+        int freq[] = new int[26];
         for(int i=0;i<s.length();i++) {
-            char c = s.charAt(i);
-            map.put(c,map.getOrDefault(c,0)+1);
+            freq[s.charAt(i)-'a']++;
+            freq[t.charAt(i)-'a']--;
         }
 
-        for(int i=0;i<t.length();i++) {
-            char c = t.charAt(i);
-            map.put(c,map.getOrDefault(c,0)-1);
-        }
-
-        for(Integer v : map.values()) {
-            if(v!=0) {
+        for(int count : freq) {
+            if(count!=0) {
                 return false;
             }
         }
+
         return true;
     }
 }
