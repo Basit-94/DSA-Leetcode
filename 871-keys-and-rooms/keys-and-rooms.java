@@ -10,13 +10,11 @@ class Solution {
         while(!q.isEmpty()) {
             list = q.peek();
             q.remove();
-
             for(int room : list) {
                 if(vis[room]==0) {
                     q.add(rooms.get(room));
+                    vis[room] = 1;
                 }
-                
-                vis[room] = 1;
             }
         }
 
